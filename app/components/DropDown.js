@@ -1,8 +1,8 @@
 'use strict'
 
 import React, { Component } from 'react'
-import { findDOMNode } from 'react-dom'
 import { Link } from 'react-router'
+import { Dropdown } from 'semantic-ui-react'
 
 class DropDown extends Component {
 
@@ -27,16 +27,25 @@ class DropDown extends Component {
     let { item } = this.props
 
     return (
-      <div className="ui dropdown hover item" ref="dropdown">
-        { item.name } <i className="dropdown icon"></i>
-        <div className="menu">
-          { item.options.map((item) => (
-              <Link key={ item.href } className="item" to={ item.href }>
-                { item.title }
-              </Link>
-          )) }
-        </div>
-      </div>
+      <Dropdown
+        text={item.name}
+        className='item'
+      >
+        <Dropdown.Menu>
+        {
+          item.options.map((item) => (
+            <Dropdown.Item
+              as={Link}
+              key={item.href}
+              className="item"
+              to={ item.href }
+            >
+              { item.title }
+            </Dropdown.Item>
+          ))
+        }
+        </Dropdown.Menu>
+      </Dropdown>
     )
   }
 

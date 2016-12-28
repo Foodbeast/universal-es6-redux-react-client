@@ -40,6 +40,7 @@ const renderFullPage = (html, state, head) => {
         ${head.title.toString()}
         ${head.link.toString()}
         ${head.meta.toString()}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"></link>
       </head>
       <body>
         <div id="root">${html}</div>
@@ -47,7 +48,6 @@ const renderFullPage = (html, state, head) => {
           window.__INITIAL_STATE__ = ${JSON.stringify(state)}
         </script>
         <script src="/static/vendor.js"></script>
-        <script src="/static/semantic/semantic.min.js"></script>
         <script src="/static/bundle.js"></script>
       </body>
     </html>

@@ -39,9 +39,6 @@ jspm_packages
 
 .DS_Store
 
-#semantic ui
-semantic/dist/
-
 #bundled js
 static/bundle.js
 static/vendor.js

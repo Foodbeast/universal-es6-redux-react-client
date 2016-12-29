@@ -33,6 +33,7 @@ export default (req, res, next) => {
 }
 
 const renderFullPage = (html, state, head) => {
+  const initialStateString = JSON.stringify(state).replace(/\//g, '\\/')
   return `
     <!doctype html>
     <html ${head.htmlAttributes.toString()}>
@@ -44,7 +45,7 @@ const renderFullPage = (html, state, head) => {
       <body>
         <div id="root">${html}</div>
         <script>
-          window.__INITIAL_STATE__ = ${JSON.stringify(state)}
+          window.__INITIAL_STATE__ = ${initialStateString}
         </script>
         <script src="/static/vendor.js"></script>
         <script src="/static/semantic/semantic.min.js"></script>

@@ -1,14 +1,12 @@
 'use strict'
 
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import { Grid } from 'semantic-ui-react'
 
-const Page = ({ children }) => (
-  <Container>
+export default ({ children }) => (
+  <Grid stackable columns={2}>
     <Row>
       <Col>{ children }</Col>
     </Row>
-  </Container>
+  </Grid>
 )
-
-export default Page

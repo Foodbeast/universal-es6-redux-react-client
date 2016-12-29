@@ -1,12 +1,12 @@
 'use strict'
 
 import React from 'react'
-import { Row } from 'reactstrap'
+import { Container } from 'semantic-ui-react'
 import Menu from '../Menu'
 
 export default ({ children, params }) => (
-  <Row>
+  <Container>
       <Menu params={params} />
       { children }
-  </Row>
+  </Container>
 )

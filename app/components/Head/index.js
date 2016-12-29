@@ -7,7 +7,7 @@ const headConfig = {
   htmlAttributes: {'lang': 'en'},
   title: 'Default App Title',
   link: [
-    {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'},
+    {rel: 'stylesheet', type: 'text/css', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css'},
   ],
   meta: [
     {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'},
@@ -21,7 +21,7 @@ const mapState = (state, {post, params}) => {
       htmlAttributes: headConfig.htmlAttributes,
       title: post.title,
       link: [
-        {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'},
+        {rel: 'stylesheet', type: 'text/css', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css'},
       ],
       meta: [
         {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'},

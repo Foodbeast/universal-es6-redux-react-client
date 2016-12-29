@@ -1,9 +1,9 @@
 'use strict'
 
 import { connect } from 'react-redux'
-import Menu from '../components/Menu'
+import Menu from './Menu'
 
-const mapState = (state, props) => {
+const mapStateToProps = (state, props) => {
 
   let { menu, posts } = state
 
@@ -24,4 +24,4 @@ const mapState = (state, props) => {
 
 }
 
-export default connect(mapState)(Menu)
+export default connect(mapStateToProps)(Menu)

@@ -1,5 +1,4 @@
 'use strict'
 
-import jQuery from 'jquery'
-
-window.jQuery = jQuery
+// import jQuery from 'jquery'
+// window.jQuery = jQuery

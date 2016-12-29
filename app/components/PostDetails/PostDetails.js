@@ -1,12 +1,13 @@
 'use strict'
 
 import React, { Component, PropTypes } from 'react'
+import { Container } from 'reactstrap'
 
 const PostDetails = ({ post }) => (
-  <div>
-    <h2 className="ui header">{ post.title }</h2>
+  <Container>
+    <h2>{ post.title }</h2>
     <p>{ post.body }</p>
-  </div>
+  </Container>
 )
 
 export default PostDetails

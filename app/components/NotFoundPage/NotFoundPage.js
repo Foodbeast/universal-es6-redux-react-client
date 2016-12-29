@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Link } from 'react-router'
-import Page from './Page'
+import Page from '../Layout/Page'
 
 const NotFoundPage = () => (
   <Page>

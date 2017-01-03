@@ -1,0 +1,11 @@
+/* Foodbeast Red */
+.red {
+  color: #db4444;
+}
+.bg-red {
+  background-color: #db4444;
+}
+
+.content {
+  margin-top: 2rem;
+}

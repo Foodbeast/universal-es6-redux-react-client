@@ -7,6 +7,8 @@ import Menu from '../Menu'
 export default ({ children, params }) => (
   <Row>
       <Menu params={params} />
-      { children }
+      <div className="content">
+        { children }
+      </div>
   </Row>
 )

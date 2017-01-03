@@ -21,22 +21,31 @@ export default class Menu extends Component {
 
     this.toggle = this.toggle.bind(this)
     this.renderMenuItem = this.renderMenuItem.bind(this)
-    this.state = {
-      dropdownOpen: false
-    }
+
+    // create open state for each dropdown
+    const { pages } = props
+    const dropdownOpenState = pages.reduce((dropdowns, page) => {
+      return page.options ? { ...dropdowns, [page.name]: false } : dropdowns
+    }, {})
+
+    this.state = { dropdownOpenState }
   }
 
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    })
+  toggle(page) {
+    // update open state for provided page
+    const dropdownOpenState = {
+      ...this.state.dropdownOpenState,
+      [page.name]: !this.state.dropdownOpenState[page.name]
+    }
+
+    this.setState({ dropdownOpenState })
   }
 
   render() {
     const { pages } = this.props
     return (
-      <Navbar color="faded" light>
-        <Container fluid>
+      <Navbar color="red" dark>
+        <Container>
           <NavbarBrand tag={Link} to="/">Foodbeast</NavbarBrand>
           <Nav navbar>
             { pages.map(this.renderMenuItem) }
@@ -51,8 +60,8 @@ export default class Menu extends Component {
     if(item.options) return (
       <NavDropdown
         key={'nav_'+item.name}
-        isOpen={this.state.dropdownOpen}
-        toggle={this.toggle}
+        isOpen={this.state.dropdownOpenState[item.name]}
+        toggle={()=>this.toggle(item)}
       >
         <DropdownToggle nav caret>
           { item.name }

@@ -1,7 +1,7 @@
 'use strict'
 
 import React, { Component, PropTypes } from 'react'
-import { Container } from 'reactstrap'
+import { Container } from 'semantic-ui-react'
 
 const PostDetails = ({ post }) => (
   <Container>

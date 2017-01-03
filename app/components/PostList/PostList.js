@@ -1,26 +1,16 @@
 'use strict'
 
 import React, { Component } from 'react'
-import { Container, Row, Col, CardDeck } from 'reactstrap'
+import { Container, Card, Header } from 'semantic-ui-react'
 import PostCard from '../PostCard'
 
 export default ({ posts, title, rows }) => (
   <Container>
-    <Row>
-      <h2>{ title }</h2>
-    </Row>
-    <Row>
-      {
-        rows.map((row, i) => {
-          return (
-            <Row key={"card_row:"+i}>
-              <CardDeck>
-                { row.map((post) => <PostCard key={ post.id } post={ post } />) }
-              </CardDeck>
-            </Row>
-          )
-        })
-      }
-    </Row>
+    <Header as="h2">{ title }</Header>
+    <Card.Group
+      itemsPerRow={3}
+    >
+      { posts.map((post) => <PostCard key={ post.id } post={ post } />) }
+    </Card.Group>
   </Container>
 )

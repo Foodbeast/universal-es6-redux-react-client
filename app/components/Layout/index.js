@@ -5,8 +5,8 @@ import { Container } from 'semantic-ui-react'
 import Menu from '../Menu'
 
 export default ({ children, params }) => (
-  <Container>
-      <Menu params={params} />
-      { children }
-  </Container>
+  <div>
+    <Menu params={params} />
+    <Container className="content">{ children }</Container>
+  </div>
 )

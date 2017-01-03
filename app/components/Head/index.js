@@ -8,7 +8,7 @@ const headConfig = {
   title: 'Default App Title',
   link: [
     {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'},
-    {rel: 'stylesheet', type: 'text/css', href: '/static/foodbeast.css'},
+    {rel: 'stylesheet', type: 'text/css', href: '/static/custom.css'},
   ],
   meta: [
     {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'},
@@ -23,7 +23,7 @@ const mapState = (state, {post, params}) => {
       title: post.title,
       link: [
         {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'},
-        {rel: 'stylesheet', type: 'text/css', href: '/static/foodbeast.css'},
+        {rel: 'stylesheet', type: 'text/css', href: '/static/custom.css'},
       ],
       meta: [
         {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'},

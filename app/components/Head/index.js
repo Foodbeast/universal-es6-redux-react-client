@@ -23,7 +23,7 @@ const mapState = (state, {post, params}) => {
       title: post.title,
       link: [
         {rel: 'stylesheet', type: 'text/css', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css'},
-        {rel: 'stylesheet', type: 'text/css', href: '/static/foodbeast.css'},
+        {rel: 'stylesheet', type: 'text/css', href: '/static/custom.css'},
       ],
       meta: [
         {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'},

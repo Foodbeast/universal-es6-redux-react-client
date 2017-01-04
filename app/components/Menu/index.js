@@ -8,7 +8,7 @@ const mapStateToProps = (state, props) => {
   let { menu, posts } = state
 
   // Build posts dropdown options
-  let showsOptions = posts
+  let options = posts
     .map((post)=>({ ...post, active: props.params.post === post.id }))
     .sort((a,b)=>{
       let nameA = a.title.toLowerCase()
@@ -18,7 +18,7 @@ const mapStateToProps = (state, props) => {
 
   // Build new pages array with dropdown options
   let pages = menu.pages.map((page) =>
-    page.name === 'Posts' ? { ...page, options: showsOptions } : page)
+    page.name === 'Posts' ? { ...page, options } : page)
 
   return { pages }
 

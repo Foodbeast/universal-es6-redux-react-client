@@ -7,24 +7,13 @@ import { Link } from 'react-router'
 export default class Nav extends Component {
   constructor(props) {
     super(props)
-
-    this.toggle = this.toggle.bind(this)
     this.renderMenuItem = this.renderMenuItem.bind(this)
-    this.state = {
-      dropdownOpen: false
-    }
-  }
-
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    })
   }
 
   render() {
     const { pages } = this.props
     return (
-      <Menu stackable>
+      <Menu stackable className="bg-red">
         <Container>
           { pages.map(this.renderMenuItem) }
         </Container>

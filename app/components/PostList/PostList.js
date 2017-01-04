@@ -1,11 +1,11 @@
 'use strict'
 
 import React, { Component } from 'react'
-import { Container, Row, Col, CardDeck } from 'reactstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 import PostCard from '../PostCard'
 
 export default ({ posts, title, rows }) => (
-  <Container>
+  <Grid>
     <Row>
       <h2>{ title }</h2>
     </Row>
@@ -14,13 +14,11 @@ export default ({ posts, title, rows }) => (
         rows.map((row, i) => {
           return (
             <Row key={"card_row:"+i}>
-              <CardDeck>
-                { row.map((post) => <PostCard key={ post.id } post={ post } />) }
-              </CardDeck>
+              { row.map((post) => <Col xs={4} key={ post.id }><PostCard post={ post } /></Col>) }
             </Row>
           )
         })
       }
     </Row>
-  </Container>
+  </Grid>
 )

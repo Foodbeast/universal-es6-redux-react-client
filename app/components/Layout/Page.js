@@ -1,14 +1,12 @@
 'use strict'
 
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 
-const Page = ({ children }) => (
-  <Container>
+export default ({ children }) => (
+  <Grid>
     <Row>
       <Col>{ children }</Col>
     </Row>
-  </Container>
+  </Grid>
 )
-
-export default Page

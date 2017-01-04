@@ -7,7 +7,7 @@ const headConfig = {
   htmlAttributes: {'lang': 'en'},
   title: 'Default App Title',
   link: [
-    {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'},
+    {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css'},
     {rel: 'stylesheet', type: 'text/css', href: '/static/custom.css'},
   ],
   meta: [
@@ -22,7 +22,7 @@ const mapState = (state, {post, params}) => {
       htmlAttributes: headConfig.htmlAttributes,
       title: post.title,
       link: [
-        {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'},
+        {rel: 'stylesheet', type: 'text/css', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css'},
         {rel: 'stylesheet', type: 'text/css', href: '/static/custom.css'},
       ],
       meta: [
